@@ -1,22 +1,17 @@
-console.log(getHumanChoice());
-
-
-
-
 
 function getComputerChoice()
 {
   let randomNumber = Math.floor((Math.random() * 3));
   // 0 - 2 random Number
-  if(r === 0)
+  if(randomNumber === 0)
   {
     return "Rock";
   }
-  else if(r === 1)
+  else if(randomNumber === 1)
   {
     return "Paper";
   }
-  else if(r === 2)
+  else if(randomNumber === 2)
   {
     return "Scissors";
   }
@@ -25,6 +20,61 @@ function getComputerChoice()
 
 function getHumanChoice()
 {
+  // case sensitive
   let humanChoice = prompt("Rock, paper, or scissors? ");
   return humanChoice;
+}
+
+
+
+function playGame()
+{
+  let humanScore = 0;
+  let computerScore = 0;
+  function playRound(humanChoice, computerChoice)
+{
+  humanChoice = humanChoice.toUpperCase();
+  computerChoice = computerChoice.toUpperCase();
+  if(humanChoice === computerChoice)
+  {
+    console.log("Tie! Both played " + humanChoice);
+    // tie case
+  }
+  else if(humanChoice === "ROCK" && computerChoice === "PAPER")
+  {
+    computerScore++;
+    console.log("Computer wins! Computer played: " + computerChoice + " human played: " + humanChoice);
+    // case
+  }
+  else if(humanChoice === "ROCK" && computerChoice === "SCISSORS")
+  {
+    humanScore++;
+    console.log("Human wins! Computer played: " + computerChoice + " human played: " + humanChoice);
+      // case
+  }
+  else if(humanChoice === "PAPER" && computerChoice === "ROCK")
+  {
+    humanScore++;
+    console.log("Human wins! Computer played: " + computerChoice + " human played: " + humanChoice);
+      // case
+  }
+  else if(humanChoice === "PAPER" && computerChoice === "SCISSORS")
+  {
+    computerScore++;
+    console.log("Computer wins! Computer played: " + computerChoice + " human played: " + humanChoice);
+      // case
+  }
+  else if(humanChoice === "SCISSORS" && computerChoice === "PAPER")
+  {
+    humanScore++;
+    console.log("Human wins! Computer played: " + computerChoice + " human played: " + humanChoice);
+      // case
+  }
+  else if(humanChoice === "SCISSORS" && computerChoice === "ROCK")
+  {
+    computerScore++;
+    console.log("Computer wins! Computer played: " + computerChoice + " human played: " + humanChoice);
+      // case
+   }
+}
 }
