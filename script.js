@@ -77,4 +77,24 @@ function playGame()
       // case
    }
 }
+
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  if(computerScore > humanScore)
+  {
+    console.log("Computer wins with " + computerScore + " vs human score: " + humanScore);
+  }
+  else if(humanScore > computerScore)
+  {
+    console.log("Human wins with " + humanScore + " vs computer score: " + computerScore);
+  }
+  else
+  {
+    console.log("TIE! Both had a score of " + humanScore);
+  }
 }
+
+playGame();
