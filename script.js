@@ -5,6 +5,7 @@ let scissorsButton = document.querySelector(".scissors");
 
 rockButton.addEventListener('click', () => {
   playRound("Rock", getComputerChoice());
+  rockButton.classList()
 });
 
 paperButton.addEventListener('click', () => {
@@ -50,48 +51,60 @@ function checkVictory()
 
 function playRound(humanChoice, computerChoice)
 {
+
+  let result = document.querySelector(".result");
+  
 humanChoice = humanChoice.toUpperCase();
 computerChoice = computerChoice.toUpperCase();
 if(humanChoice === computerChoice)
 {
-  console.log("Tie! Both played " + humanChoice);
+
+  result.textContent = "Tie!";
+
   // tie case
 }
 else if(humanChoice === "ROCK" && computerChoice === "PAPER")
 {
   computerScore++;
-  console.log("Computer wins! Computer played: " + computerChoice + " human played: " + humanChoice);
+  result.textContent = "Computer Wins!";
+
   // case
 }
 else if(humanChoice === "ROCK" && computerChoice === "SCISSORS")
 {
   humanScore++;
-  console.log("Human wins! Computer played: " + computerChoice + " human played: " + humanChoice);
+  result.textContent = "Human Wins!;"
+
     // case
 }
 else if(humanChoice === "PAPER" && computerChoice === "ROCK")
 {
   humanScore++;
-  console.log("Human wins! Computer played: " + computerChoice + " human played: " + humanChoice);
+  result.textContent = "Human Wins!";
+
     // case
 }
 else if(humanChoice === "PAPER" && computerChoice === "SCISSORS")
 {
   computerScore++;
-  console.log("Computer wins! Computer played: " + computerChoice + " human played: " + humanChoice);
+  result.textContent = "Computer Wins!";
     // case
 }
 else if(humanChoice === "SCISSORS" && computerChoice === "PAPER")
 {
   humanScore++;
-  console.log("Human wins! Computer played: " + computerChoice + " human played: " + humanChoice);
+  result.textContent = "Human Wins!";
+  
     // case
 }
 else if(humanChoice === "SCISSORS" && computerChoice === "ROCK")
 {
   computerScore++;
-  console.log("Computer wins! Computer played: " + computerChoice + " human played: " + humanChoice);
+  result.textContent = "Computer Wins!";
     // case
  }
+
+document.querySelector(".player-score").textContent = "Score: " + humanScore;
+document.querySelector(".computer-score").textContent = "Score: " + computerScore;
 }
 

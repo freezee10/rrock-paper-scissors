@@ -1,0 +1,89 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Gidole";
+  background-color: black;
+  color: white;
+  
+}
+
+.title {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.outer {
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+  gap: 50px;
+}
+
+img {
+  width: 60px;
+  
+}
+
+.player-label {
+  text-align: center;
+}
+.player-container, .computer-container {
+  background-color: #80CFA9;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 10px;
+
+  width: 300px;
+  
+  padding: 20px 20px;
+
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.rock-option {
+  display: flex;
+  flex-direction: column;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+#comp-picture {
+  width: 50px;
+}
+
+#user-pic {
+  width: 50px;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.player-label {
+  font-size: 25px;
+}
+
+.result {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.clicked {
+  background-color: #C9D7F8;
+}

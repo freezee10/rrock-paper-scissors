@@ -4,12 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gidole&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button class="rock">Rock</button>
-  <button class="paper">Paper</button>
-  <button class="scissors">Scissors</button>
-  
+  <h1 class="title">Rock, Paper, Scissors</h1>
+
+
+  <div class="outer">
+    <div class="player-container">
+      <h1 class="player-label">PLAYER</h1>
+      <div class="cont">
+        <img id="user-pic" src="images/user.png">
+        <p class="player-score">Score: 0</p>
+      </div>
+        <div class="options">
+          <button class="rock"><img src="images/rock.png"></button>
+          <button class="paper"> <img src="images/paper.png"> </button>
+          <button class="scissors"><img src="images/scissors.png"></button>
+        </div>
+      
+      </div>
+
+      <div class="computer-container">
+        <h1 class="player-label">COMPUTER</h1>
+        <div class="cont">
+          <img id="comp-picture" src="images/computer.png">
+          <p class="computer-score">Score: 0</p>
+        </div>
+
+        <div class="options">
+          <button class="rock"><img src="images/rock.png"></button>
+          <button class="paper"> <img src="images/paper.png"> </button>
+          <button class="scissors"><img src="images/scissors.png"></button>
+        </div>
+      
+      </div>
+
+      
+    </div>
+
+  </div>
+
+
+ 
+  <div class="result"></div>
+
   <script src="script.js">
   </script>
 </body>
