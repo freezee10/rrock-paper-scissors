@@ -25,7 +25,12 @@ body {
 
 img {
   width: 60px;
-  
+  border: none;
+}
+
+button {
+  border: none;
+  border-radius: 3px;
 }
 
 .player-label {
@@ -71,8 +76,17 @@ img {
   width: 50px;
 }
 
-img:hover {
+button {
+  transition: 0.1s;
+}
+
+button:hover {
   cursor: pointer;
+  opacity: 0.8;
+}
+
+button:active {
+  opacity: 0.65;
 }
 
 .player-label {
@@ -82,8 +96,19 @@ img:hover {
 .result {
   margin-top: 50px;
   text-align: center;
+  font-size: 30px;
 }
 
 .clicked {
   background-color: #C9D7F8;
+}
+
+.options img {
+  width: 75px;
+}
+
+.winner {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 40px;
 }
