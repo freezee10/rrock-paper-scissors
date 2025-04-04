@@ -112,3 +112,22 @@ button:active {
   text-align: center;
   font-size: 40px;
 }
+
+.reset {
+  display: none;
+  background-color: white;
+  color: black;
+  margin-top: 30px;
+  padding: 20px 50px;
+  border-radius: 25px;
+  font-size: 17.5px;
+}
+
+.visible {
+  display: block;
+}
+
+.reset-container {
+  display: flex;
+  justify-content: center;
+}

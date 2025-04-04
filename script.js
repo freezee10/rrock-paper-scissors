@@ -148,12 +148,16 @@ function highlightComputerChoice(choice)
   }
 }
 
+
+document.querySelector(".reset").addEventListener('click', resetGame);
+
 function checkGameOver()
 {
   if(humanScore === 5)
   {
     document.querySelector(".winner").textContent = "Human Wins " + humanScore + " to " + computerScore;
     removeEventListeners();
+    document.querySelector(".reset").classList.add("visible");
     return;
   }
 
@@ -162,6 +166,7 @@ function checkGameOver()
     
         document.querySelector(".winner").textContent = "Computer Wins " + computerScore + " to " + humanScore;
         removeEventListeners();
+        document.querySelector(".reset").classList.add("visible");
       return;
   }
 
@@ -181,3 +186,18 @@ function addEventListeners()
   paperButton.addEventListener('click', paperEvent);
   scissorsButton.addEventListener('click', scissorsEvent);
 }
+
+function resetGame()
+{
+  document.querySelector('.result').textContent = '';
+  document.querySelector(".winner").textContent = "";
+  document.querySelector(".reset").classList.remove('visible');
+
+  addEventListeners();
+  humanScore = 0;
+  computerScore = 0;
+  document.querySelector(".player-score").textContent = "Score: " + humanScore;
+document.querySelector(".computer-score").textContent = "Score: " + computerScore;
+resetHighlight()
+}
+
