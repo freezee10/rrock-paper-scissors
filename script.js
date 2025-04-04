@@ -32,10 +32,8 @@ function scissorsEvent()
   scissorsButton.classList.add("clicked");
   highlightComputerChoice(computerChoice);
 }
-rockButton.addEventListener('click', rockEvent);
 
-paperButton.addEventListener('click', paperEvent);
-scissorsButton.addEventListener('click', scissorsEvent);
+addEventListeners();
 
 function getComputerChoice()
 {
@@ -172,11 +170,14 @@ function checkGameOver()
 
 function removeEventListeners()
 {
-  rockButton.removeEventListener('click', () => {
-    let computerChoice = getComputerChoice();
-    playRound("Rock", computerChoice);
-    resetHighlight()
-    rockButton.classList.add("clicked");
-    highlightComputerChoice(computerChoice);
-  });
+  rockButton.removeEventListener('click', rockEvent);
+  paperButton.removeEventListener('click', paperEvent);
+  scissorsButton.removeEventListener('click', scissorsEvent);
+}
+
+function addEventListeners()
+{
+  rockButton.addEventListener('click', rockEvent);
+  paperButton.addEventListener('click', paperEvent);
+  scissorsButton.addEventListener('click', scissorsEvent);
 }
