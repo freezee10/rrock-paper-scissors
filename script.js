@@ -6,28 +6,36 @@ let cRockButton = document.querySelector(".crock")
 let cPaperButton = document.querySelector(".cpaper");
 let cScissorsButton = document.querySelector(".cscissors")
 
-rockButton.addEventListener('click', () => {
+function rockEvent()
+{
   let computerChoice = getComputerChoice();
   playRound("Rock", computerChoice);
   resetHighlight()
   rockButton.classList.add("clicked");
   highlightComputerChoice(computerChoice);
-});
+}
 
-paperButton.addEventListener('click', () => {
+function paperEvent()
+{
   let computerChoice = getComputerChoice();
   playRound("Paper", computerChoice);
   resetHighlight()
   paperButton.classList.add("clicked");
   highlightComputerChoice(computerChoice);
-});
-scissorsButton.addEventListener('click', () => {
+}
+
+function scissorsEvent()
+{
   let computerChoice = getComputerChoice();
   playRound("Scissors", computerChoice);
   resetHighlight()
   scissorsButton.classList.add("clicked");
   highlightComputerChoice(computerChoice);
-});
+}
+rockButton.addEventListener('click', rockEvent);
+
+paperButton.addEventListener('click', paperEvent);
+scissorsButton.addEventListener('click', scissorsEvent);
 
 function getComputerChoice()
 {
